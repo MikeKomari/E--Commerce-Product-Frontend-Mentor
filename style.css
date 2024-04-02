@@ -34,6 +34,8 @@ a {
 
   /* ===== */
   border-bottom: 1px solid gray;
+
+  max-width: 100%;
 }
 
 .navbar_content {
@@ -279,18 +281,22 @@ a {
   display: none;
 }
 
-@media screen and (max-width: 375px) {
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .navbar {
-    justify-content: center;
-    gap: 5rem;
-    width: 100%;
-  }
-  .link {
-    display: none;
-  }
+.slider_thumbnail_container {
+  margin-top: 31rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider_thumbnail {
+  position: absolute;
+  display: flex;
+}
+
+.slider_thumbnail img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 7px;
+  cursor: pointer;
 }
