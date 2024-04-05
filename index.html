@@ -38,6 +38,8 @@
         color: hsl(228, 45%, 44%);
       }
     </style>
+
+    <script defer src="script.js" type="module"></script>
   </head>
   <body>
     <!-- slider toggle -->
@@ -139,16 +141,26 @@
             <div class="linebreak2"></div>
 
             <!-- if pop up is empty -->
-            <div class="pop-up_content empty">
+            <!-- <div class="pop-up_content empty">
               <h4 class="empty_text">Your cart is empty.</h4>
-            </div>
+            </div> -->
             <!-- if pop up has items in it
               show this instead of the above div -->
-            <div class="pop-up_content items">
-              <div class="pop-up-items-wrapper">
+            <!-- BEFOREBEGIN -->
+            <div class="cart__container items">
+              <!-- AFTERBEGIN -->
+              <!-- <div class="cart__item">
                 <img src="images/image-product-1-thumbnail.jpg" />
-              </div>
+                <div class="cart__desc">
+                  <p class="cart__title">Adidas Shoes</p>
+                  <p class="cart__price">
+                    $125 x3 <span class="cart__price-accent">$375</span>
+                  </p>
+                </div>
+              </div> -->
+              <!-- BEFOREEND -->
             </div>
+            <!-- AFTEREND -->
           </div>
         </div>
       </nav>
@@ -202,8 +214,17 @@
           </button>
         </div>
       </div>
+      <div class="TESTING">
+        <button class="add-item-1 add-item-test" data-item-id="ITEM-1">
+          Add Item 1
+        </button>
+        <button class="add-item-2 add-item-test" data-item-id="ITEM-2">
+          Add Item 2
+        </button>
+        <button class="add-item-3 add-item-test" data-item-id="ITEM-3">
+          Add Item 3
+        </button>
+      </div>
     </div>
-
-    <script src="script.js"></script>
   </body>
 </html>

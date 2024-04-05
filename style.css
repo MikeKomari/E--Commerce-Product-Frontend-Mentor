@@ -105,8 +105,11 @@ a {
 
 .pop-up-wrapper {
   position: absolute;
-  width: 300px;
-  height: 250px;
+  width: 100%;
+  max-width: 17.5rem;
+  padding: 1rem 1.5rem;
+  /* width: 300px;
+  height: 250px; */
   border-radius: 15px;
   top: 7.3rem;
   right: -1rem;
@@ -132,8 +135,8 @@ a {
 }
 
 .pop-up_content {
-  height: 95px;
-  padding-top: 4rem;
+  /* height: 95px; */
+  /* padding-top: 4rem; */
   display: grid;
   place-items: center;
 }
@@ -299,4 +302,23 @@ a {
   object-fit: cover;
   border-radius: 7px;
   cursor: pointer;
+}
+
+.cart__item {
+  display: flex;
+  /* justify-content: space-sta; */
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding-block: 1rem;
+}
+
+.cart__item img {
+  height: 3.5rem;
+  border-radius: 0.25rem;
+  aspect-ratio: 1;
+}
+
+.cart__title {
+  margin-bottom: 0.25rem;
 }
