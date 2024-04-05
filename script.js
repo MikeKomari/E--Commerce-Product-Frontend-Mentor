@@ -159,12 +159,37 @@ itemAddButtonList.forEach((button) => {
     const clickedItemId = this.dataset.itemId;
 
     const itemDetails = itemList.find((item) => item.id === clickedItemId);
-    cartItemList.push({ ...itemDetails });
-    renderCartUI({
-      title: itemDetails.title,
-      price: itemDetails.priceDollar,
-      image: `images/${itemDetails.imageLink}`,
-      count: 1,
+
+    const itemIndexInCart = cartItemList.findIndex(
+      (item) => item.id === clickedItemId
+    );
+    const isInCart = itemIndexInCart !== -1;
+    if (isInCart) {
+      cartItemList[itemIndexInCart] = {
+        ...cartItemList[itemIndexInCart],
+        count: cartItemList[itemIndexInCart].count + 1,
+      };
+    } else {
+      cartItemList.push({
+        id: clickedItemId,
+        title: itemDetails.name,
+        price: itemDetails.priceDollar,
+        image: `images/${itemDetails.imageLink}`,
+        count: 1,
+      });
+    }
+
+    console.log(cartItemList);
+
+    cartContainerEl.innerHTML = "";
+
+    cartItemList.forEach((item) => {
+      renderCartUI({
+        title: item.title,
+        price: item.priceDollar,
+        image: item.imageLink,
+        count: item.count,
+      });
     });
   });
 });
